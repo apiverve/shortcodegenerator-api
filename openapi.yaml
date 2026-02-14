@@ -1,49 +1,49 @@
 openapi: 3.0.4
 info:
   title: Short Code Generator
-  description: Short Code Generator is a tool for generating short alphanumeric codes. It supports multiple character sets including alphanumeric, alphabetic, numeric, hexadecimal, and Base58 with customizable length.
+  description: >-
+    Short Code Generator is a tool for generating short alphanumeric codes. It
+    supports multiple character sets including alphanumeric, alphabetic,
+    numeric, hexadecimal, and Base58 with customizable length.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/shortcodegenerator:
     get:
       summary: Generate Short Code
-      description: Short Code Generator is a tool for generating short alphanumeric codes. It supports multiple character sets including alphanumeric, alphabetic, numeric, hexadecimal, and Base58 with customizable length.
+      description: Generate short alphanumeric codes with customizable options
       operationId: shortcodegenerator
       parameters:
-      - name: count
-        default: '1'
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Number of codes to generate (1-100, default: 1)'
-        example: '5'
-      - name: length
-        default: '8'
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Length of each code (4-32, default: 8)'
-        example: '8'
-      - name: charset
-        default: alphanumeric
-        in: query
-        schema:
-          type: string
-        required: false
-        description: "Character set: 'alphanumeric', 'alpha', 'numeric', 'hex', or 'base58' (default: alphanumeric)"
-        example: alphanumeric
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Number of codes to generate
+          example: 5
+        - name: length
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Length of each code
+          example: 8
+        - name: charset
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Character set
+          example: alphanumeric
       responses:
         '200':
           description: Successful Response
@@ -59,18 +59,18 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   codes:
-                  - JztVCjKv
-                  - 4usty2st
-                  - pUjZD6sr
-                  - cnZwbJxA
-                  - QvhFS4tU
+                    - bgiFznFh
+                    - jr84hHsG
+                    - Q77qABwn
+                    - gvMjXxXs
+                    - WDPJzCsi
                   count: 5
                   length: 8
                   charset: alphanumeric
@@ -80,7 +80,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -88,4 +88,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
