@@ -13,14 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/shortcodegenerator';
  */
 async function callShortCodeGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            count: &#x27;5&#x27;,
-            length: &#x27;8&#x27;,
-            charset: &#x27;alphanumeric&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
