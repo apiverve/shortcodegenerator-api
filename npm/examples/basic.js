@@ -15,8 +15,8 @@ const api = new shortcodegeneratorAPI({
 
 // Example query
 var query = {
-  count: "5",
-  length: "8",
+  count: 1,
+  length: 8,
   charset: "alphanumeric"
 };
 
