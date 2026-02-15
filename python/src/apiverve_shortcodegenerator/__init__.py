@@ -1,1 +1,3 @@
-from .apiClient import ShortcodegeneratorAPIClient
+from .apiClient import ShortcodegeneratorAPIClient, ShortcodegeneratorAPIClientError
+
+__all__ = ['ShortcodegeneratorAPIClient', 'ShortcodegeneratorAPIClientError']
