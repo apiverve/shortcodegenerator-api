@@ -11,22 +11,19 @@ namespace APIVerve.API.ShortCodeGenerator
     public class ShortCodeGeneratorQueryOptions
     {
         /// <summary>
-        /// Number of codes to generate (1-100, default: 1)
-        /// Example: 5
+        /// Number of codes to generate
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
 
         /// <summary>
-        /// Length of each code (4-32, default: 8)
-        /// Example: 8
+        /// Length of each code
         /// </summary>
         [JsonProperty("length")]
         public string Length { get; set; }
 
         /// <summary>
-        /// Character set: 'alphanumeric', 'alpha', 'numeric', 'hex', or 'base58' (default: alphanumeric)
-        /// Example: alphanumeric
+        /// Character set
         /// </summary>
         [JsonProperty("charset")]
         public string Charset { get; set; }
