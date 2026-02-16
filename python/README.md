@@ -44,7 +44,11 @@ from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = ShortcodegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 ```
 
 ###### Simple Request
@@ -130,7 +138,11 @@ from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient, S
 
 api = ShortcodegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 
 try:
     result = api.execute(query)
@@ -151,7 +163,11 @@ from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient, S
 
 api = ShortcodegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 
 try:
     result = api.execute(query)
@@ -185,7 +201,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient, ShortcodegeneratorAPIClientError
 
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 
 # Using context manager ensures proper cleanup
 with ShortcodegeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -211,7 +231,11 @@ from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient
 # Enable debug mode
 api = ShortcodegeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "count": 1, "length": 8, "charset": "alphanumeric" }
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -226,8 +250,13 @@ from apiverve_shortcodegenerator.apiClient import ShortcodegeneratorAPIClient
 
 api = ShortcodegeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "count": 1,
+    "length": 8,
+    "charset": "alphanumeric"
+}
+
 try:
-    query = { "count": 1, "length": 8, "charset": "alphanumeric" }
     result = api.execute(query)
     print(result)
 finally:
