@@ -14,13 +14,13 @@ namespace APIVerve.API.ShortCodeGenerator
         /// Number of codes to generate
         /// </summary>
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
         /// Length of each code
         /// </summary>
         [JsonProperty("length")]
-        public string Length { get; set; }
+        public int? Length { get; set; }
 
         /// <summary>
         /// Character set
