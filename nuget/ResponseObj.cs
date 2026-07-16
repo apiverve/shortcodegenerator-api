@@ -25,6 +25,9 @@ namespace APIVerve.API.ShortCodeGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,15 +36,27 @@ namespace APIVerve.API.ShortCodeGenerator
         public string[] Codes { get; set; }
 
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("length")]
-        public long Length { get; set; }
+        public long? Length { get; set; }
 
         [JsonProperty("charset")]
         public string Charset { get; set; }
 
         [JsonProperty("url_safe")]
-        public bool UrlSafe { get; set; }
+        public bool? UrlSafe { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
