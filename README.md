@@ -1,13 +1,13 @@
-# [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Short Code Generator is a tool for generating short alphanumeric codes. It supports multiple character sets including alphanumeric, alphabetic, numeric, hexadecimal, and Base58 with customizable length.
+Short Code Generator creates custom alphanumeric short codes for vouchers, referral tokens, and redirect slugs. Specify a length, batch count, and character set like numeric, hex, or Base58 to receive an array of random strings.
 
 The Short Code Generator API provides a simple, reliable way to integrate short code generator functionality into your applications. Built for developers who need production-ready short code generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/shortcodegenerator-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/shortcodegenerator](https://docs.apiverve.com/ref/shortcodegenerator)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -193,11 +193,38 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Short Code Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "codes": [
+      "bgiFznFh",
+      "jr84hHsG",
+      "Q77qABwn",
+      "gvMjXxXs",
+      "WDPJzCsi"
+    ],
+    "count": 5,
+    "length": 8,
+    "charset": "alphanumeric",
+    "url_safe": true
+  }
 }
 ```
 
@@ -205,7 +232,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

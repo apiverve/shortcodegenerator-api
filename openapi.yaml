@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Short Code Generator
   description: >-
-    Short Code Generator is a tool for generating short alphanumeric codes. It
-    supports multiple character sets including alphanumeric, alphabetic,
-    numeric, hexadecimal, and Base58 with customizable length.
+    Short Code Generator creates custom alphanumeric short codes for vouchers,
+    referral tokens, and redirect slugs. Specify a length, batch count, and
+    character set like numeric, hex, or Base58 to receive an array of random
+    strings.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/shortcodegenerator:
     get:
-      summary: Generate Short Code
+      summary: Short Code Generator
       description: Generate short alphanumeric codes with customizable options
       operationId: shortcodegenerator
       parameters:
