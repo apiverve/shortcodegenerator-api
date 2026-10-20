@@ -1,13 +1,12 @@
 Short Code Generator API
 ============
 
-Short Code Generator is a tool for generating short alphanumeric codes. It supports multiple character sets including alphanumeric, alphabetic, numeric, hexadecimal, and Base58 with customizable length.
+Short Code Generator creates custom alphanumeric short codes for vouchers, referral tokens, and redirect slugs. Specify a length, batch count, and character set like numeric, hex, or Base58 to receive an array of random strings.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-shortcodegenerator.svg)](https://pypi.org/project/apiverve-shortcodegenerator/)
+
+This is a Python wrapper for the [Short Code Generator API](https://apiverve.com/marketplace/shortcodegenerator?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-shortcodegenerator
 
 ## Configuration
 
-Before using the shortcodegenerator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Short Code Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -64,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Short Code Generator API documentation is found here: [https://docs.apiverve.com/ref/shortcodegenerator](https://docs.apiverve.com/ref/shortcodegenerator?utm_source=pypi&utm_medium=readme).
+The Short Code Generator API documentation is found here: [https://docs.apiverve.com/ref/shortcodegenerator](https://docs.apiverve.com/ref/shortcodegenerator?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -111,11 +110,11 @@ print(result)
   "error": null,
   "data": {
     "codes": [
-      "JztVCjKv",
-      "4usty2st",
-      "pUjZD6sr",
-      "cnZwbJxA",
-      "QvhFS4tU"
+      "bgiFznFh",
+      "jr84hHsG",
+      "Q77qABwn",
+      "gvMjXxXs",
+      "WDPJzCsi"
     ],
     "count": 5,
     "length": 8,
@@ -268,7 +267,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -279,12 +278,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
